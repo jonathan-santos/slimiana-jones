@@ -28,5 +28,4 @@ func move():
 
 func jump():
 	if Input.is_action_just_pressed("jump"):
-		print("jump")
 		add_central_force(Vector3.UP * jump_force)

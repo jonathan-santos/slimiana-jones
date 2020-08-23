@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://materials/object.tres" type="Material" id=1]
 [ext_resource path="res://materials/objective.tres" type="Material" id=2]
 [ext_resource path="res://materials/slimiana_jones.tres" type="Material" id=3]
 [ext_resource path="res://scripts/camera.gd" type="Script" id=4]
 [ext_resource path="res://scripts/slimiana_jones.gd" type="Script" id=5]
+[ext_resource path="res://scenes/objective_warp.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -50,9 +51,7 @@ height = 1.0948
 depth = 2.53791
 material = ExtResource( 2 )
 
-[node name="CSGSphere" type="CSGSphere" parent="Scenario/Objective"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.485796, 0 )
-operation = 2
+[node name="ObjectiveWarp" parent="Scenario/Objective" instance=ExtResource( 6 )]
 
 [node name="SlimianaJones" type="RigidBody" parent="." groups=[
 "player",
