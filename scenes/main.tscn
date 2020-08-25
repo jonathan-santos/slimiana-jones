@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://materials/object.tres" type="Material" id=1]
 [ext_resource path="res://materials/objective.tres" type="Material" id=2]
 [ext_resource path="res://scenes/slimiana_jones.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/camera.gd" type="Script" id=4]
+[ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objective_warp.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Spatial"]
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="Scenario" type="Spatial" parent="."]
 
